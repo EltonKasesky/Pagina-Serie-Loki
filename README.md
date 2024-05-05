@@ -11,7 +11,7 @@ Este projeto é uma aplicação web desenvolvida para oferecer uma solução par
 - Abra o arquivo `index.html` no seu navegador.
 
 2. Abra o link abaixo, e veja o site hospedado na Vercel
-- Link: `https://pagina-serie-loki-kasesky.vercel.app`
+- Link: [`Pagina Serie Loki`](https://pagina-serie-loki-kasesky.vercel.app)
 
 ## Funcionalidades
 1. Responvidade
