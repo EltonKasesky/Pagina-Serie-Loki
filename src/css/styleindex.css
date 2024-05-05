@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --color-white: #ffffff;
+
+    --color-button-blue: #0072D2;
+    --color-button-black: #131318;
+
+    --color-mobile-background: #131318;
+
+    --font-archivo: 'Archivo', sans-serif;
+    --font-space-grotesk: 'Space Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-space-grotesk);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.container-title {
+    text-align: center;
+}
+
+.container-title h4 {
+    font-size: 32px;
+    font-weight: 700px;
+    text-shadow: rgba(0, 0, 0, 0.25);
+    color: var(--color-white);
+}
+
+.container-title h1 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 117px;
+    color: var(--color-white);
+}
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    gap: 60px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.movie-image {
+    width: 224px;
+    height: 280px;
+}
+
+.movie-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.movie-info {
+    max-width: 722px;
+}
+
+.movie-description p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.movie-avaliation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.movie-time {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.movie-time p,
+.movie-avaliation p {
+    font-size: 20px;
+    font-family: var(--font-archivo);
+    line-height: 32px;
+    color: var(--color-white);
+}
+
+.movie-time p {
+    font-weight: 600;
+}
+
+.movie-star {
+    display: flex;
+    gap: 12px;
+}
+
+.movie-star img:last-child {
+    opacity: 0.3;
+}
+
+.movie-avaliation p {
+    font-weight: 500;
+}
+
+.movie-buttons {
+    display: flex;
+    gap: 32px;
+    margin-top: 50px;
+}
+
+.movie-buttons .watch-now,
+.movie-buttons .watch-trailer {
+    text-decoration: none;
+    font-family: var(--font-archivo);
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 16px 32px;
+    transition: opacity 0.4s ease;
+}
+
+.movie-buttons .watch-now {
+    background-color: var(--color-button-blue);
+    color: var(--color-white);
+}
+
+.movie-buttons .watch-trailer {
+    background-color: var(--color-button-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.movie-buttons .watch-now:hover,
+.movie-buttons .watch-trailer:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 1075px) {
+    .movie-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 510px) {
+    .main-container {
+        padding: 0;
+        justify-content: space-between;
+        height: 100vh;
+    }
+
+    .container-info {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-title {
+        margin-top: 45px;
+    }
+
+    .container-title h4 {
+        font-size: 18px;
+    }
+
+    .container-title h1 {
+        font-size: 48px;
+        line-height: normal;
+        margin-top: 10px;
+    }
+
+    .movie-image {
+        display: none;
+    }
+
+    .movie-info {
+        padding: 32px;
+        background-color: var(--color-mobile-background);
+        border-radius: 16px 16px 0 0;
+    }
+
+    .movie-avaliation {
+        flex-wrap: wrap;
+    }
+
+    .movie-description p,
+    .movie-time p,
+    .movie-avaliation p {
+        font-size: 15px;
+    }
+
+    .movie-star {
+        gap: 6px;
+    }
+
+    .movie-time img,
+    .movie-star img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .movie-buttons {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+}
